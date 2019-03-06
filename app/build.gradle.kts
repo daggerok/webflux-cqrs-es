@@ -87,7 +87,7 @@ tasks.register<JavaExec>("h2") {
     return@register
   }
 
-  var addons = mutableListOf<String>()
+  val addons = mutableListOf<String>()
   // ./gradlew -P browser
   if (project.findProperty("browser") != null) {
     addons.add("-browser")
