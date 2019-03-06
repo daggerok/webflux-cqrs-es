@@ -11,6 +11,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 import static javax.persistence.InheritanceType.SINGLE_TABLE;
 import static lombok.AccessLevel.PROTECTED;
@@ -34,8 +35,8 @@ public abstract class DomainEvent<E> implements Serializable {
   @Id
   @GeneratedValue
   @Column(updatable = false, nullable = false)
-  protected Long id;
-  //protected UUID id;
+  //protected Long id;
+  protected UUID id;
   //@Version
   //@Column(name = "version")
   //protected Integer version;

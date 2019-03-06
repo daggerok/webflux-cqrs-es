@@ -108,18 +108,18 @@ Content-Type: application/json;charset=UTF-8
 {
     "domainEvents": [
         {
-            "createdDate": "2019-03-06T02:35:8",
+            "createdDate": "2019-03-06T03:05:18",
             "data": {
                 "val1": "hello!",
                 "val2": "hola!",
                 "val3": "привед!"
             },
             "dataFieldOfEvent1": "ololo trololo!",
-            "id": 1,
-            "modifiedDate": "2019-03-06T02:35:070"
+            "id": "7218b483-aa67-4e64-8b03-d3b483c8e7b7",
+            "modifiedDate": "2019-03-06T03:05:792"
         },
         {
-            "createdDate": "2019-03-06T02:36:10",
+            "createdDate": "2019-03-06T03:05:25",
             "data": {
                 "val1": "test!",
                 "val2": "default val 2",
@@ -128,27 +128,27 @@ Content-Type: application/json;charset=UTF-8
             "field1": "one",
             "field2": "two",
             "field3": "three",
-            "id": 2,
-            "modifiedDate": "2019-03-06T02:36:807"
+            "id": "68bc2d3b-50be-490a-a70b-5166153a4c8e",
+            "modifiedDate": "2019-03-06T03:05:447"
         }
     ],
     "events1": [
         {
-            "createdDate": "2019-03-06T02:35:8",
+            "createdDate": "2019-03-06T03:05:18",
             "data": {
                 "val1": "hello!",
                 "val2": "hola!",
                 "val3": "привед!"
             },
             "dataFieldOfEvent1": "ololo trololo!",
-            "id": 1,
-            "modifiedDate": "2019-03-06T02:35:070"
+            "id": "7218b483-aa67-4e64-8b03-d3b483c8e7b7",
+            "modifiedDate": "2019-03-06T03:05:792"
         }
     ],
     "events2": [],
     "events3": [
         {
-            "createdDate": "2019-03-06T02:36:10",
+            "createdDate": "2019-03-06T03:05:25",
             "data": {
                 "val1": "test!",
                 "val2": "default val 2",
@@ -157,12 +157,14 @@ Content-Type: application/json;charset=UTF-8
             "field1": "one",
             "field2": "two",
             "field3": "three",
-            "id": 2,
-            "modifiedDate": "2019-03-06T02:36:807"
+            "id": "68bc2d3b-50be-490a-a70b-5166153a4c8e",
+            "modifiedDate": "2019-03-06T03:05:447"
         }
     ]
 }
 ```
+
+<!--
 
 TODO: kafka messaging and event sourcing and ...everything else
 
@@ -171,3 +173,5 @@ TODO: kafka messaging and event sourcing and ...everything else
 ```bash
 wget -qO- https://raw.githubusercontent.com/daggerok/kafka-java-example/master/download-and-start-kafka.sh | bash
 ```
+
+-->
