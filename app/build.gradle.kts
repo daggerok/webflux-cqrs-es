@@ -111,6 +111,7 @@ tasks.register<JavaExec>("h2") {
       "-tcpAllowOthers",
       "-web",
       /*"-webDaemon",*/ // not worked for some reasons as daemon...
+                        // we just cannot use JavaExec gradle task for it
       "-webAllowOthers"
   ).plus(addons)
 }
