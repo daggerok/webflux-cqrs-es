@@ -25,7 +25,7 @@ Yep. It's in progress. Also.
 ## add some events
 
 ```bash
-http :8080/mytest value1=ololo value2=trololo
+http :8080/inheritance value1=ololo value2=trololo
 HTTP/1.1 200 OK
 Content-Length: 138
 Content-Type: application/json;charset=UTF-8
@@ -34,13 +34,37 @@ Content-Type: application/json;charset=UTF-8
 
 ```json
 {
-    "createdDate": "2019-03-06T00:59:1",
+    "createdDate": "2019-03-06T02:56:6",
     "data": {
         "value1": "ololo",
         "value2": "trololo"
     },
     "id": 1,
-    "modifiedDate": "2019-03-06T00:59:327",
+    "modifiedDate": "2019-03-06T02:56:719",
+    "version": 0
+}
+```
+
+_update to test if @Version is working_
+
+
+```bash
+http :8080/inheritance/1 value1=ololo value2='trololo11111oneoneone'
+HTTP/1.1 200 OK
+Content-Length: 152
+Content-Type: application/json;charset=UTF-8
+# output:
+```
+
+```json
+{
+    "createdDate": "2019-03-06T02:56:6",
+    "data": {
+        "value1": "ololo",
+        "value2": "trololo11111oneoneone"
+    },
+    "id": 1,
+    "modifiedDate": "2019-03-06T02:57:219",
     "version": 1
 }
 ```

@@ -1,4 +1,4 @@
-package com.github.daggerok.event.mytest;
+package com.github.daggerok.event.inheritance;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.vavr.control.Try;
@@ -10,20 +10,20 @@ import javax.persistence.Converter;
 
 @Component
 @Converter(autoApply = true)
-public class MyTestEventDataJsonConverter implements AttributeConverter<MyTestEventData, String> {
+public class EventDataJsonConverter implements AttributeConverter<EventData, String> {
 
   @Autowired
   ObjectMapper objectMapper;
 
   @Override
-  public String convertToDatabaseColumn(MyTestEventData attribute) {
+  public String convertToDatabaseColumn(EventData attribute) {
     return Try.of(() -> objectMapper.writeValueAsString(attribute))
               .getOrElseGet(throwable -> "{}");
   }
 
   @Override
-  public MyTestEventData convertToEntityAttribute(String dbData) {
-    return Try.of(() -> objectMapper.readValue(dbData, MyTestEventData.class))
+  public EventData convertToEntityAttribute(String dbData) {
+    return Try.of(() -> objectMapper.readValue(dbData, EventData.class))
               .getOrElseGet(throwable -> null);
   }
 }

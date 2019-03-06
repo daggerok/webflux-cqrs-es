@@ -1,4 +1,4 @@
-package com.github.daggerok.event.mytest;
+package com.github.daggerok.event.noinheritance;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

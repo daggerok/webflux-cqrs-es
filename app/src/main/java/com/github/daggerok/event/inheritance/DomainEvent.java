@@ -1,4 +1,4 @@
-package com.github.daggerok.event.noinheritance;
+package com.github.daggerok.event.inheritance;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
@@ -15,10 +15,15 @@ import java.time.LocalDateTime;
 import static javax.persistence.InheritanceType.SINGLE_TABLE;
 import static lombok.AccessLevel.PROTECTED;
 
+// read more:
+// http://blog.netgloo.com/2014/12/18/handling-entities-inheritance-with-spring-data-jpa/
+// https://github.com/netgloo/spring-boot-samples/tree/master/spring-boot-springdatajpa-inheritance/src/main/java/netgloo/models
+
 @Data
 @Entity
-//@Table(name = "domain_event")
-@Inheritance//(strategy = SINGLE_TABLE)
+@Setter(PROTECTED)
+//@Table(name = "domain_event") // by default
+@Inheritance//(strategy = SINGLE_TABLE) // by default
 @EntityListeners(AuditingEntityListener.class)
 public abstract class DomainEvent<E> implements Serializable {
 
@@ -28,7 +33,6 @@ public abstract class DomainEvent<E> implements Serializable {
 
   @Id
   @GeneratedValue
-  @Setter(PROTECTED)
   @Column(updatable = false, nullable = false)
   protected Long id;
   //protected UUID id;

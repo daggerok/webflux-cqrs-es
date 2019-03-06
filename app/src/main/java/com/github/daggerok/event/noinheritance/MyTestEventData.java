@@ -11,8 +11,7 @@ import static lombok.AccessLevel.PROTECTED;
 @Setter(PROTECTED)
 @NoArgsConstructor
 @AllArgsConstructor(staticName = "of")
-public class EventData {
-  String val1 = "default value 1";
-  String val2 = "default val 2";
-  String val3 = "and 3...";
+public class MyTestEventData {
+  String value1 = "default value 1";
+  String value2;
 }

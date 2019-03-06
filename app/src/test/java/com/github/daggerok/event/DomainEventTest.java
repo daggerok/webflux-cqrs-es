@@ -1,6 +1,6 @@
 package com.github.daggerok.event;
 
-import com.github.daggerok.event.mytest.MyTestEventRepository;
+import com.github.daggerok.event.noinheritance.MyTestEventRepository;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;

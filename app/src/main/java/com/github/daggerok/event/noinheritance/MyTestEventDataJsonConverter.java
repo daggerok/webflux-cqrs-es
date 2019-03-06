@@ -10,20 +10,20 @@ import javax.persistence.Converter;
 
 @Component
 @Converter(autoApply = true)
-public class EventDataJsonConverter implements AttributeConverter<EventData, String> {
+public class MyTestEventDataJsonConverter implements AttributeConverter<MyTestEventData, String> {
 
   @Autowired
   ObjectMapper objectMapper;
 
   @Override
-  public String convertToDatabaseColumn(EventData attribute) {
+  public String convertToDatabaseColumn(MyTestEventData attribute) {
     return Try.of(() -> objectMapper.writeValueAsString(attribute))
               .getOrElseGet(throwable -> "{}");
   }
 
   @Override
-  public EventData convertToEntityAttribute(String dbData) {
-    return Try.of(() -> objectMapper.readValue(dbData, EventData.class))
+  public MyTestEventData convertToEntityAttribute(String dbData) {
+    return Try.of(() -> objectMapper.readValue(dbData, MyTestEventData.class))
               .getOrElseGet(throwable -> null);
   }
 }

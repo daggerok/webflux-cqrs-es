@@ -1,4 +1,4 @@
-package com.github.daggerok.event.mytest;
+package com.github.daggerok.event.noinheritance;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
@@ -13,10 +13,6 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 
 import static lombok.AccessLevel.PROTECTED;
-
-// read more:
-// http://blog.netgloo.com/2014/12/18/handling-entities-inheritance-with-spring-data-jpa/
-// https://github.com/netgloo/spring-boot-samples/tree/master/spring-boot-springdatajpa-inheritance/src/main/java/netgloo/models
 
 @Data
 @MappedSuperclass

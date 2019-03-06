@@ -1,4 +1,4 @@
-package com.github.daggerok.event.noinheritance;
+package com.github.daggerok.event.inheritance;
 
 import io.vavr.collection.HashMap;
 import lombok.RequiredArgsConstructor;
